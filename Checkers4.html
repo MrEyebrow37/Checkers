@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkers4</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-82" class="piecable start-black"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-84" class="piecable start-black"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-86" class="piecable start-black"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-88" class="piecable start-black"></div></div>
+        <div class="grid-item brown"><div id="p-71" class="piecable start-black"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-73" class="piecable start-black"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-75" class="piecable start-black"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-77" class="piecable start-black"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-62" class="piecable start-black"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-64" class="piecable start-black"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-66" class="piecable start-black"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-68" class="piecable start-black"></div></div>
+        <div class="grid-item brown"><div id="p-51" class="piecable"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-53" class="piecable"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-55" class="piecable"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-57" class="piecable"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-42" class="piecable"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-44" class="piecable"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-46" class="piecable"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-48" class="piecable"></div></div>
+        <div class="grid-item brown"><div id="p-31" class="piecable start-white"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-33" class="piecable start-white"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-35" class="piecable start-white"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-37" class="piecable start-white"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-22" class="piecable start-white"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-24" class="piecable start-white"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-26" class="piecable start-white"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-28" class="piecable start-white"></div></div>
+        <div class="grid-item brown"><div id="p-11" class="piecable start-white"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-13" class="piecable start-white"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-15" class="piecable start-white"></div></div>
+        <div class="grid-item tan"  ></div>
+        <div class="grid-item brown"><div id="p-17" class="piecable start-white"></div></div>
+        <div class="grid-item tan"  ></div>
+
+        <style>
+        
+        .brown{
+        background-color: rgb(100, 25, 25);
+        width: 80px;
+        height: 80px;
+        }
+
+        .tan{
+        background-color: rgb(165, 126, 75);
+        width: 80px;
+        height: 80px;
+        }
+
+        .grid-container {
+        display: grid;
+        grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px;
+        width: 80%;
+       max-width: 900px;
+       margin-left: auto;
+       margin-right: auto;
+        }
+
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .piece-white{
+         background-color: tan;
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+        }
+
+        .piece-black{
+         background-color: black;
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+        }
+
+        .king-white{
+         background-color: tan;
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+         border: 5px solid red;
+        }
+
+        .king-black{
+         background-color: black;
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+         border: 5px solid red;
+        }
+
+
+
+        .potential-move-up-right{
+            background-color: gray;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+
+        .potential-move-up-left{
+            background-color: gray;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+
+        .potential-capture-up-right{
+            background-color: gray;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+
+        .potential-capture-up-left{
+            background-color: gray;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+
+        .potential-move-down-right{
+            background-color: gray;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+
+        .potential-move-down-left{
+            background-color: gray;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+
+        .potential-capture-down-right{
+            background-color: gray;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+
+        .potential-capture-down-left{
+            background-color: gray;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+        }
+
+
+    </style>
+    <script src="./Checkers4.js"></script>
+</body>
+</html>
