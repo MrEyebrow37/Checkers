@@ -101,34 +101,34 @@ function addPotenialMoves(e) {
     const movingPieceRow = parseInt(movingPiece.id.split('-')[1].split('')[0])
     const movingPieceIdNumber = movingPiece.id.split('-')[1]
     if (type === 'piece' && color === 'white') {
-        addPotentialMoveUpRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialMoveUpLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialCaptureUpRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialCaptureUpLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
+        addPotentialMoveUpRight(movingPieceIdNumber, movingPiece)
+        addPotentialMoveUpLeft(movingPieceIdNumber, movingPiece)
+        addPotentialCaptureUpRight(movingPieceIdNumber, movingPiece)
+        addPotentialCaptureUpLeft(movingPieceIdNumber, movingPiece)
     }
 
     if (type === 'piece' && color === 'black') {
-        addPotentialMoveDownRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialMoveDownLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialCaptureDownRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialCaptureDownLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
+        addPotentialMoveDownRight(movingPieceIdNumber, movingPiece)
+        addPotentialMoveDownLeft(movingPieceIdNumber, movingPiece)
+        addPotentialCaptureDownRight(movingPieceIdNumber, movingPiece)
+        addPotentialCaptureDownLeft(movingPieceIdNumber, movingPiece)
     }
 
     if (type === 'king' && (movingPieceRow === 1 || movingPieceRow === 2 || movingPieceRow === 3 || movingPieceRow === 4 || movingPieceRow === 5 ||  movingPieceRow === 6)) {
-        addPotentialCaptureUpRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialCaptureUpLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
+        addPotentialCaptureUpRight(movingPieceIdNumber, movingPiece)
+        addPotentialCaptureUpLeft(movingPieceIdNumber, movingPiece)
     }
 
     if (type === 'king' && (movingPieceRow === 3 || movingPieceRow === 4 || movingPieceRow === 5 || movingPieceRow === 6 || movingPieceRow === 7 || movingPieceRow === 8)) {
-        addPotentialCaptureDownRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialCaptureDownLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
+        addPotentialCaptureDownRight(movingPieceIdNumber, movingPiece)
+        addPotentialCaptureDownLeft(movingPieceIdNumber, movingPiece)
     }
 
     if (type === 'king') {
-        addPotentialMoveUpRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialMoveUpLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialMoveDownRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialMoveDownLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
+        addPotentialMoveUpRight(movingPieceIdNumber, movingPiece)
+        addPotentialMoveUpLeft(movingPieceIdNumber, movingPiece)
+        addPotentialMoveDownRight(movingPieceIdNumber, movingPiece)
+        addPotentialMoveDownLeft(movingPieceIdNumber, movingPiece)
     }
 }
 
@@ -147,35 +147,32 @@ function addPotentialCaptures(e) {
     const movingPieceRow = parseInt(movingPiece.id.split('-')[1].split('')[0])
     const movingPieceIdNumber = movingPiece.id.split('-')[1]
     if (type === 'piece' && color === 'white') {
-        addPotentialCaptureUpRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialCaptureUpLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
+        addPotentialCaptureUpRight(movingPieceIdNumber, movingPiece)
+        addPotentialCaptureUpLeft(movingPieceIdNumber, movingPiece)
     }
 
     if (type === 'piece' && color === 'black') {
-        addPotentialCaptureDownRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialCaptureDownLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
+        addPotentialCaptureDownRight(movingPieceIdNumber, movingPiece)
+        addPotentialCaptureDownLeft(movingPieceIdNumber, movingPiece)
     }
 
     if (type === 'king' && (movingPieceRow === 1 || movingPieceRow === 2 || movingPieceRow === 3 || movingPieceRow === 4 || movingPieceRow === 5 ||  movingPieceRow === 6)) {
-        addPotentialCaptureUpRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialCaptureUpLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
+        addPotentialCaptureUpRight(movingPieceIdNumber, movingPiece)
+        addPotentialCaptureUpLeft(movingPieceIdNumber, movingPiece)
     }
 
     if (type === 'king' && (movingPieceRow === 3 || movingPieceRow === 4 || movingPieceRow === 5 || movingPieceRow === 6 || movingPieceRow === 7 || movingPieceRow === 8)) {
-        addPotentialCaptureDownRight(movingPieceRow, movingPieceIdNumber, movingPiece)
-        addPotentialCaptureDownLeft(movingPieceRow, movingPieceIdNumber, movingPiece)
+        addPotentialCaptureDownRight(movingPieceIdNumber, movingPiece)
+        addPotentialCaptureDownLeft(movingPieceIdNumber, movingPiece)
     }
 }
 
-function addPotentialMoveUpRight(movingPieceRow, movingPieceIdNumber) {
+function addPotentialMoveUpRight(movingPieceIdNumber) {
     piecables.forEach(function(element) {
         element.classList.remove('potential-move-up-right')
         const potentialSquare = element
         const potentialSquareIdNumber = potentialSquare.id.split('-')[1]
-        if(movingPieceIdNumber - potentialSquareIdNumber === -11 && movingPieceRow % 2 === 1 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
-            potentialSquare.classList.add('potential-move-up-right')
-        }
-        if(movingPieceIdNumber - potentialSquareIdNumber === -11 && movingPieceRow % 2 === 0 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
+        if(movingPieceIdNumber - potentialSquareIdNumber === -11 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
             potentialSquare.classList.add('potential-move-up-right')
         }
     })
@@ -185,15 +182,12 @@ function addPotentialMoveUpRight(movingPieceRow, movingPieceIdNumber) {
         })
 }
 
-function addPotentialMoveUpLeft(movingPieceRow, movingPieceIdNumber) {
+function addPotentialMoveUpLeft(movingPieceIdNumber) {
     piecables.forEach(function(element) {
         element.classList.remove('potential-move-up-left')
         const potentialSquare = element
         const potentialSquareIdNumber = potentialSquare.id.split('-')[1]
-        if(movingPieceIdNumber - potentialSquareIdNumber === -9 && movingPieceRow % 2 === 1 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
-            potentialSquare.classList.add('potential-move-up-left')
-        }
-        if(movingPieceIdNumber - potentialSquareIdNumber === -9 && movingPieceRow % 2 === 0 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
+        if(movingPieceIdNumber - potentialSquareIdNumber === -9 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
             potentialSquare.classList.add('potential-move-up-left')
         }
     })
@@ -203,7 +197,7 @@ function addPotentialMoveUpLeft(movingPieceRow, movingPieceIdNumber) {
         })
 }
 
-function addPotentialCaptureUpRight(movingPieceRow, movingPieceIdNumber, movingPiece) {
+function addPotentialCaptureUpRight(movingPieceIdNumber, movingPiece) {
     piecables.forEach(function(element) {
         element.classList.remove('potential-capture-up-right')
         const potentialSquare = element
@@ -215,10 +209,7 @@ function addPotentialCaptureUpRight(movingPieceRow, movingPieceIdNumber, movingP
         } else {
             return
         }
-        if(movingPieceRow % 2 === 0 && (potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === 11 && movingPieceIdNumber - potentialSquareIdNumber === -22 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
-            potentialSquare.classList.add('potential-capture-up-right')
-        }
-        if(movingPieceRow % 2 === 1 && (potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === 11 && movingPieceIdNumber - potentialSquareIdNumber === -22 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
+        if((potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === 11 && movingPieceIdNumber - potentialSquareIdNumber === -22 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
             potentialSquare.classList.add('potential-capture-up-right')
         }
     })
@@ -228,7 +219,7 @@ function addPotentialCaptureUpRight(movingPieceRow, movingPieceIdNumber, movingP
         })
 }
 
-function addPotentialCaptureUpLeft(movingPieceRow, movingPieceIdNumber, movingPiece) {
+function addPotentialCaptureUpLeft(movingPieceIdNumber, movingPiece) {
     piecables.forEach(function(element) {
         element.classList.remove('potential-capture-up-left')
         const potentialSquare = element
@@ -240,10 +231,7 @@ function addPotentialCaptureUpLeft(movingPieceRow, movingPieceIdNumber, movingPi
         } else {
             return
         }
-        if(movingPieceRow % 2 === 0 && (potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === 9 && movingPieceIdNumber - potentialSquareIdNumber === -18 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
-            potentialSquare.classList.add('potential-capture-up-left')
-        }
-        if(movingPieceRow % 2 === 1  && (potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === 9 && movingPieceIdNumber - potentialSquareIdNumber === -18 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
+        if((potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === 9 && movingPieceIdNumber - potentialSquareIdNumber === -18 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
             potentialSquare.classList.add('potential-capture-up-left')
         }
     })
@@ -262,10 +250,7 @@ function handleMoveUpRight(e) {
         const movedPieceIdNumber = movedPiece.id.split('-')[1]
         const pastPiece = element
         const pastPieceIdNumber = pastPiece.id.split('-')[1]
-        if(movedPieceIdNumber - pastPieceIdNumber === 11 && movedPieceRow % 2 === 1) {
-            pastPiece.classList.remove(`${type}-${color}`)
-        }
-        if(movedPieceIdNumber - pastPieceIdNumber === 11 && movedPieceRow % 2 === 0) {
+        if(movedPieceIdNumber - pastPieceIdNumber === 11) {
             pastPiece.classList.remove(`${type}-${color}`)
         }
     })
@@ -285,10 +270,7 @@ function handleMoveUpLeft(e) {
         const movedPieceIdNumber = movedPiece.id.split('-')[1]
         const pastPiece = element
         const pastPieceIdNumber = pastPiece.id.split('-')[1]
-        if(movedPieceIdNumber - pastPieceIdNumber === 9 && movedPieceRow % 2 === 1) {
-            pastPiece.classList.remove(`${type}-${color}`)
-        }
-        if(movedPieceIdNumber - pastPieceIdNumber === 9 && movedPieceRow % 2 === 0) {
+        if(movedPieceIdNumber - pastPieceIdNumber === 9) {
             pastPiece.classList.remove(`${type}-${color}`)
         }
     })
@@ -311,12 +293,7 @@ function handleCaptureUpRight(e) {
         const pastPieceIdNumber = pastPiece.id.split('-')[1]
         const capturedPiece = movedPiece.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild
         const capturedPieceIdNumber = capturedPiece.id.split('-')[1]
-        if(capturedPieceIdNumber - pastPieceIdNumber === 11 && movedPieceIdNumber - pastPieceIdNumber === 22 && movedPieceRow % 2 === 1) {
-            pastPiece.classList.remove(`${type}-${color}`)
-            capturedPiece.classList.remove(`piece-${oppositeColor}`)
-            capturedPiece.classList.remove(`king-${oppositeColor}`)
-        }
-        if(capturedPieceIdNumber - pastPieceIdNumber === 11 && movedPieceIdNumber - pastPieceIdNumber === 22 && movedPieceRow % 2 === 0) {
+        if(capturedPieceIdNumber - pastPieceIdNumber === 11 && movedPieceIdNumber - pastPieceIdNumber === 22) {
             pastPiece.classList.remove(`${type}-${color}`)
             capturedPiece.classList.remove(`piece-${oppositeColor}`)
             capturedPiece.classList.remove(`king-${oppositeColor}`)
@@ -327,7 +304,7 @@ function handleCaptureUpRight(e) {
     removeMoveListeners()
     removeMoveClasses()
     kingMe(movedPieceRow, movedPiece)
-    multipleCaptures(e, movedPiece, movedPieceRow, movedPieceColumn, movedPieceIdNumber)
+    multipleCaptures(movedPiece, movedPieceRow, movedPieceColumn, movedPieceIdNumber)
 }
 
 function handleCaptureUpLeft(e) {
@@ -341,12 +318,7 @@ function handleCaptureUpLeft(e) {
         const pastPieceIdNumber = pastPiece.id.split('-')[1]
         const capturedPiece = movedPiece.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild
         const capturedPieceIdNumber = capturedPiece.id.split('-')[1]
-        if(capturedPieceIdNumber - pastPieceIdNumber === 9 && movedPieceIdNumber - pastPieceIdNumber === 18 && movedPieceRow % 2 === 1) {
-            pastPiece.classList.remove(`${type}-${color}`)
-            capturedPiece.classList.remove(`piece-${oppositeColor}`)
-            capturedPiece.classList.remove(`king-${oppositeColor}`)
-        }
-        if(capturedPieceIdNumber - pastPieceIdNumber === 9 && movedPieceIdNumber - pastPieceIdNumber === 18 && movedPieceRow % 2 === 0) {
+        if(capturedPieceIdNumber - pastPieceIdNumber === 9 && movedPieceIdNumber - pastPieceIdNumber === 18) {
             pastPiece.classList.remove(`${type}-${color}`)
             capturedPiece.classList.remove(`piece-${oppositeColor}`)
             capturedPiece.classList.remove(`king-${oppositeColor}`)
@@ -357,18 +329,15 @@ function handleCaptureUpLeft(e) {
     removeMoveListeners()
     removeMoveClasses()
     kingMe(movedPieceRow, movedPiece)
-    multipleCaptures(e, movedPiece, movedPieceRow, movedPieceColumn, movedPieceIdNumber)
+    multipleCaptures(movedPiece, movedPieceRow, movedPieceColumn, movedPieceIdNumber)
 }
 
-function addPotentialMoveDownRight(movingPieceRow, movingPieceIdNumber) {
+function addPotentialMoveDownRight(movingPieceIdNumber) {
     piecables.forEach(function(element) {
         element.classList.remove('potential-move-down-right')
         const potentialSquare = element
         const potentialSquareIdNumber = potentialSquare.id.split('-')[1]
-        if(movingPieceIdNumber - potentialSquareIdNumber === 9 && movingPieceRow % 2 === 1 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
-            potentialSquare.classList.add('potential-move-down-right')
-        }
-        if(movingPieceIdNumber - potentialSquareIdNumber === 9 && movingPieceRow % 2 === 0 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
+        if(movingPieceIdNumber - potentialSquareIdNumber === 9 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
             potentialSquare.classList.add('potential-move-down-right')
         }
     })
@@ -378,15 +347,12 @@ function addPotentialMoveDownRight(movingPieceRow, movingPieceIdNumber) {
         })
 }
 
-function addPotentialMoveDownLeft(movingPieceRow, movingPieceIdNumber) {
+function addPotentialMoveDownLeft(movingPieceIdNumber) {
     piecables.forEach(function(element) {
         element.classList.remove('potential-move-down-left')
         const potentialSquare = element
         const potentialSquareIdNumber = potentialSquare.id.split('-')[1]
-        if(movingPieceIdNumber - potentialSquareIdNumber === 11 && movingPieceRow % 2 === 1 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
-            potentialSquare.classList.add('potential-move-down-left')
-        }
-        if(movingPieceIdNumber - potentialSquareIdNumber === 11 && movingPieceRow % 2 === 0 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
+        if(movingPieceIdNumber - potentialSquareIdNumber === 11 && !element.classList.contains('piece-white') && !element.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
             potentialSquare.classList.add('potential-move-down-left')
         }
     })
@@ -396,7 +362,7 @@ function addPotentialMoveDownLeft(movingPieceRow, movingPieceIdNumber) {
         })
 }
 
-function addPotentialCaptureDownRight(movingPieceRow, movingPieceIdNumber, movingPiece) {
+function addPotentialCaptureDownRight(movingPieceIdNumber, movingPiece) {
     piecables.forEach(function(element) {
         element.classList.remove('potential-capture-down-right')
         const potentialSquare = element
@@ -408,10 +374,7 @@ function addPotentialCaptureDownRight(movingPieceRow, movingPieceIdNumber, movin
         } else {
             return
         }
-        if(movingPieceRow % 2 === 0 && (potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === -9 && movingPieceIdNumber - potentialSquareIdNumber === 18 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
-            potentialSquare.classList.add('potential-capture-down-right')
-        }
-        if(movingPieceRow % 2 === 1 && (potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === -9 && movingPieceIdNumber - potentialSquareIdNumber === 18 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
+        if((potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === -9 && movingPieceIdNumber - potentialSquareIdNumber === 18 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
             potentialSquare.classList.add('potential-capture-down-right')
         }
     })
@@ -421,7 +384,7 @@ function addPotentialCaptureDownRight(movingPieceRow, movingPieceIdNumber, movin
         })
 }
 
-function addPotentialCaptureDownLeft(movingPieceRow, movingPieceIdNumber, movingPiece) {
+function addPotentialCaptureDownLeft(movingPieceIdNumber, movingPiece) {
     piecables.forEach(function(element) {
         element.classList.remove('potential-capture-down-left')
         const potentialSquare = element
@@ -433,10 +396,7 @@ function addPotentialCaptureDownLeft(movingPieceRow, movingPieceIdNumber, moving
         } else {
             return
         }
-        if(movingPieceRow % 2 === 0 && (potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === -11 && movingPieceIdNumber - potentialSquareIdNumber === 22 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
-            potentialSquare.classList.add('potential-capture-down-left')
-        }
-        if(movingPieceRow % 2 === 1  && (potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === -11 && movingPieceIdNumber - potentialSquareIdNumber === 22 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
+        if((potentialCapture.classList.contains(`piece-${oppositeColor}`) || potentialCapture.classList.contains(`king-${oppositeColor}`)) && potentialCaptureIdNumber - movingPieceIdNumber === -11 && movingPieceIdNumber - potentialSquareIdNumber === 22 && !potentialSquare.classList.contains('piece-white') && !potentialSquare.classList.contains('piece-black') && !element.classList.contains('king-white') && !element.classList.contains('king-black')) {
             potentialSquare.classList.add('potential-capture-down-left')
         }
     })
@@ -454,10 +414,7 @@ function handleMoveDownRight(e) {
         const movedPieceIdNumber = movedPiece.id.split('-')[1]
         const pastPiece = element
         const pastPieceIdNumber = pastPiece.id.split('-')[1]
-        if(movedPieceIdNumber - pastPieceIdNumber === -9 && movedPieceRow % 2 === 1) {
-            pastPiece.classList.remove(`${type}-${color}`)
-        }
-        if(movedPieceIdNumber - pastPieceIdNumber === -9 && movedPieceRow % 2 === 0) {
+        if(movedPieceIdNumber - pastPieceIdNumber === -9) {
             pastPiece.classList.remove(`${type}-${color}`)
         }
     })
@@ -477,10 +434,7 @@ function handleMoveDownLeft(e) {
         const movedPieceIdNumber = movedPiece.id.split('-')[1]
         const pastPiece = element
         const pastPieceIdNumber = pastPiece.id.split('-')[1]
-        if(movedPieceIdNumber - pastPieceIdNumber === -11 && movedPieceRow % 2 === 1) {
-            pastPiece.classList.remove(`${type}-${color}`)
-        }
-        if(movedPieceIdNumber - pastPieceIdNumber === -11 && movedPieceRow % 2 === 0) {
+        if(movedPieceIdNumber - pastPieceIdNumber === -11) {
             pastPiece.classList.remove(`${type}-${color}`)
         }
     })
@@ -503,12 +457,7 @@ function handleCaptureDownRight(e) {
         const pastPieceIdNumber = pastPiece.id.split('-')[1]
         const capturedPiece = movedPiece.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild
         const capturedPieceIdNumber = capturedPiece.id.split('-')[1]
-        if(capturedPieceIdNumber - pastPieceIdNumber === -9 && movedPieceIdNumber - pastPieceIdNumber === -18 && movedPieceRow % 2 === 1) {
-            pastPiece.classList.remove(`${type}-${color}`)
-            capturedPiece.classList.remove(`piece-${oppositeColor}`)
-            capturedPiece.classList.remove(`king-${oppositeColor}`)
-        }
-        if(capturedPieceIdNumber - pastPieceIdNumber === -9 && movedPieceIdNumber - pastPieceIdNumber === -18 && movedPieceRow % 2 === 0) {
+        if(capturedPieceIdNumber - pastPieceIdNumber === -9 && movedPieceIdNumber - pastPieceIdNumber === -18) {
             pastPiece.classList.remove(`${type}-${color}`)
             capturedPiece.classList.remove(`piece-${oppositeColor}`)
             capturedPiece.classList.remove(`king-${oppositeColor}`)
@@ -519,7 +468,7 @@ function handleCaptureDownRight(e) {
     removeMoveListeners()
     removeMoveClasses()
     kingMe(movedPieceRow, movedPiece)
-    multipleCaptures(e, movedPiece, movedPieceRow, movedPieceColumn, movedPieceIdNumber)
+    multipleCaptures(movedPiece, movedPieceRow, movedPieceColumn, movedPieceIdNumber)
 }
 
 function handleCaptureDownLeft(e) {
@@ -533,12 +482,7 @@ function handleCaptureDownLeft(e) {
         const pastPieceIdNumber = pastPiece.id.split('-')[1]
         const capturedPiece = movedPiece.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild
         const capturedPieceIdNumber = capturedPiece.id.split('-')[1]
-        if(capturedPieceIdNumber - pastPieceIdNumber === -11 && movedPieceIdNumber - pastPieceIdNumber === -22 && movedPieceRow % 2 === 1) {
-            pastPiece.classList.remove(`${type}-${color}`)
-            capturedPiece.classList.remove(`piece-${oppositeColor}`)
-            capturedPiece.classList.remove(`king-${oppositeColor}`)
-        }
-        if(capturedPieceIdNumber - pastPieceIdNumber === -11 && movedPieceIdNumber - pastPieceIdNumber === -22 && movedPieceRow % 2 === 0) {
+        if(capturedPieceIdNumber - pastPieceIdNumber === -11 && movedPieceIdNumber - pastPieceIdNumber === -22) {
             pastPiece.classList.remove(`${type}-${color}`)
             capturedPiece.classList.remove(`piece-${oppositeColor}`)
             capturedPiece.classList.remove(`king-${oppositeColor}`)
@@ -549,7 +493,7 @@ function handleCaptureDownLeft(e) {
     removeMoveListeners()
     removeMoveClasses()
     kingMe(movedPieceRow, movedPiece)
-    multipleCaptures(e, movedPiece, movedPieceRow, movedPieceColumn, movedPieceIdNumber)
+    multipleCaptures(movedPiece, movedPieceRow, movedPieceColumn, movedPieceIdNumber)
 }
 
 function kingMe(movedPieceRow, movedPiece) {
@@ -566,7 +510,7 @@ function kingMe(movedPieceRow, movedPiece) {
     
 }
 
-function multipleCaptures(e, movedPiece, movedPieceRow, movedPieceColumn, movedPieceIdNumber) {
+function multipleCaptures(movedPiece, movedPieceRow, movedPieceColumn, movedPieceIdNumber) {
         let potentialSquareUpRight
         let potentialSquareUpLeft
         let potentialSquareDownRight
